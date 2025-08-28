@@ -9,26 +9,56 @@
       margin: 0;
       padding: 0;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 220px;
-      height: 80px;
+      width: 300px;
+      height: auto;
       background: transparent;
+      font-family: Arial, sans-serif;
+      text-align: center;
     }
-    a {
-      display: inline-block;
-      text-decoration: none;
-    }
+
     img {
-      max-width: 100%;
+      max-width: 80%;
       height: auto;
       display: block;
+      margin-bottom: 8px;
+    }
+
+    h3 {
+      margin: 4px 0;
+      font-size: 16px;
+      color: #1E224F;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 8px 16px;
+      margin-top: 8px;
+      background-color: #71EFA3;
+      color: #1E224F;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    a.button:hover {
+      background-color: #5DD98C;
     }
   </style>
 </head>
 <body>
-  <a id="affiliateLink" target="_blank" rel="noopener noreferrer">
-    <img id="affiliateLogo" src="" alt="Affiliate Badge">
+  <!-- Logo -->
+  <img id="affiliateLogo" src="" alt="Affiliate Badge">
+
+  <!-- Headline -->
+  <h3>Get your website in 5 days with Layerly</h3>
+
+  <!-- Button -->
+  <a id="affiliateLink" class="button" target="_blank" rel="noopener noreferrer">
+    Visit Layerly
   </a>
 
   <script>
@@ -41,13 +71,13 @@
     const affiliateLink = document.getElementById("affiliateLink");
     const affiliateLogo = document.getElementById("affiliateLogo");
 
-    // Set the link target (you can update this base URL)
-    affiliateLink.href = `https://layerly.io/?ref=${affiliateId}`;
+    // Set the link target
+    affiliateLink.href = `https://layerly.io/?${affiliateId}`;
 
     // Set the logo based on dark mode
     affiliateLogo.src = darkMode 
-      ? "logo-dark.png"   // replace with your actual dark logo path
-      : "logo-light.png"; // replace with your actual light logo path
+      ? "logo-dark.png"   // Ensure the logos are in images/ folder
+      : "logo-light.png";
   </script>
 </body>
 </html>
