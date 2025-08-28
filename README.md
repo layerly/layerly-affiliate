@@ -15,7 +15,7 @@ How to use
 </script>
 <iframe
   id="affiliateBadgeIframe"
-  src="https://layerly.github.io/layerly-affiliate/affiliate-badge.html?affiliate_id=YOUR_ID&theme=light"
+  src="https://layerly.github.io/layerly-affiliate/affiliate-badge.html?affiliate_id=YOUR_ID&dark=false"
   width="100%"
   style="border:none; width:100%;"
 ></iframe>
@@ -26,6 +26,6 @@ Options
 
 Example (dark mode):
 
-src="https://layerly.github.io/layerly-affiliate/affiliate-badge.html?affiliate_id=YOUR_ID&theme=dark"
+src="https://layerly.github.io/layerly-affiliate/affiliate-badge.html?affiliate_id=YOUR_ID&dark=true"
 
 That’s it! 🎉
