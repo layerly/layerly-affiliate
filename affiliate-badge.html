@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Affiliate Badge</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 220px;
+      height: 80px;
+      background: transparent;
+    }
+    a {
+      display: inline-block;
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <a id="affiliateLink" target="_blank" rel="noopener noreferrer">
+    <img id="affiliateLogo" src="" alt="Affiliate Badge">
+  </a>
+
+  <script>
+    // Parse URL params
+    const params = new URLSearchParams(window.location.search);
+    const affiliateId = params.get("affiliate_id") || "default";
+    const darkMode = params.get("dark") === "true";
+
+    // Elements
+    const affiliateLink = document.getElementById("affiliateLink");
+    const affiliateLogo = document.getElementById("affiliateLogo");
+
+    // Set the link target (you can update this base URL)
+    affiliateLink.href = `https://layerly.io/?ref=${affiliateId}`;
+
+    // Set the logo based on dark mode
+    affiliateLogo.src = darkMode 
+      ? "affiliate-iframe/logo-dark.png"   // replace with your actual dark logo path
+      : "affiliate-iframe/logo-light.png"; // replace with your actual light logo path
+  </script>
+</body>
+</html>
