@@ -36,7 +36,6 @@
 
     h3 {
       font-size: 22px;
-      color: #1E224F;
     }
 
     a.button {
@@ -85,6 +84,11 @@
     affiliateLogo.src = darkMode 
       ? "logo-dark.png"   // Ensure the logos are in images/ folder
       : "logo-light.png";
+
+    // Set font colors based on dark mode
+    const textColor = darkMode ? '#FFFFFF' : '#1E224F';
+    affiliateHeadline.style.color = textColor;
+    affiliateLink.style.color = textColor;
 
     function sendHeight() {
       const height = document.body.scrollHeight;
